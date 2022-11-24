@@ -1,0 +1,62 @@
+<html>
+    <header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </header>
+    <body>
+        <div id="div1">Hello !</div>
+        <button id="btn1">Click Me...</button>
+        <hr>
+        <div>
+            <input type="text" class="in1">
+            <input type="text" class="in1">
+            <input type="text" class="in1">
+        </div>
+        <div>
+            <button id="btn2">SAVE</button> 
+        </div>
+    </body>
+</html>
+<script>
+    var num = 10; //gloabal
+    let name = "win" //scope
+    const no = 10.45;
+        let arr = [10,20,"Hi"];
+    const obj ={name: "Dum", age:20 };
+    const objMix = {
+        data:[
+            {name:"Dang",gpa:3.45},
+            {name:"Dong",age:18, gpa:3.33}
+        ],
+    };
+
+  console.log(name);
+  console.log(arr[1]);
+  console.log(objMix.data.[1]);
+
+  document.getElementById("div1").ininerHTML = name;
+  
+  function add(a,b) {
+    return a + b;
+  }
+
+  console.log(add(3, 5));
+
+  $(function(){
+      // alert("Hello jQuey!")
+      $("#div1").text(num);
+
+      $("#btn2").click(function(){
+            $(".in1").val("BRU");
+      });
+
+      $(".int1").val("BRU");
+
+  });//jQuery Handle
+
+
+
+
+
+
+
+</script>
