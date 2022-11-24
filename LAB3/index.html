@@ -1,5 +1,12 @@
 <html>
     <header>
+        <style>
+            .red{
+                color:red;
+            }
+        </style>
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     </header>
     <body>
@@ -12,7 +19,9 @@
             <input type="text" class="in1">
         </div>
         <div>
-            <button id="btn2">SAVE</button> 
+            <button id="btn2">SAVE</button>
+            <button id="btn3">COLOR</button>
+
         </div>
     </body>
 </html>
@@ -31,7 +40,7 @@
 
   console.log(name);
   console.log(arr[1]);
-  console.log(objMix.data.[1]);
+  console.log(objMix.data[1].name);
 
   document.getElementById("div1").ininerHTML = name;
   
@@ -43,20 +52,17 @@
 
   $(function(){
       // alert("Hello jQuey!")
-      $("#div1").text(num);
+    $("#div1").text(num);
 
-      $("#btn2").click(function(){
-            $(".in1").val("BRU");
-      });
+    $("#btn2").click(function(){
+        $(".in1").val("BRU");
+    });
 
-      $(".int1").val("BRU");
+    $("#btn3").bind("Click",()=>{
+        $(".int1:even").toggleClass("red");
+    });
+
+    $("#div_form").load("./pages/form.html");
 
   });//jQuery Handle
-
-
-
-
-
-
-
 </script>
